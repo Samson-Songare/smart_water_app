@@ -14,6 +14,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // useMaterial3: true,
         primarySwatch: Colors.blue,
+        textTheme: TextTheme(
+          displayLarge: const TextStyle(
+              fontSize: 24, fontWeight: FontWeight.w500), // Define text styles
+          bodyText1: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+        ),
       ),
       home: const SplashScreen(),
     );

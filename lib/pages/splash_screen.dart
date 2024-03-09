@@ -6,7 +6,6 @@ import 'package:smart_water_app/pages/welcome_page.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     // navigating to welcome screen after three seconds
