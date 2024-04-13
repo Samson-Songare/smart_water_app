@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
+import 'package:smart_water_app/pages/notifications_page.dart';
+import 'package:smart_water_app/pages/profile/profile_page.dart';
+import 'package:smart_water_app/pages/submit_complains_page.dart';
+import 'package:smart_water_app/pages/view_bills_page.dart';
 import 'package:smart_water_app/pages/weekly_report.dart';
 
 class HomePage extends StatefulWidget {
@@ -62,6 +66,9 @@ class _HomePageState extends State<HomePage> {
               ),
               onTap: () {
                 //TODO: go to the profile screen on click
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => ProfilePage(),
+                ));
               },
             )
           ],
@@ -172,6 +179,21 @@ class HomeContainer extends StatelessWidget {
           case "View Weekly Reports":
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const WeeklyReports(),
+            ));
+            break;
+          case "Submit Complains":
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const SubmitComplainsPage(),
+            ));
+            break;
+          case "View Bills":
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const ViewBillsPage(),
+            ));
+            break;
+          case "Notifications":
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => NotificationPage(),
             ));
             break;
         }
