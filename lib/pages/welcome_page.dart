@@ -49,30 +49,33 @@ class WelcomePage extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          SizedBox(
-            width: 100,
-            height: 48,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius:
-                      BorderRadius.circular(10.0), // specify corner radius
-                ),
-              ),
-              onPressed: () {
-                //Navigate to Login page
-                // TODO: later replace this with provider route
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => LoginPage(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              width: 100,
+              height: 48,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.circular(10.0), // specify corner radius
                   ),
-                );
-              },
-              child: const Text(
-                "Start Tracking",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w500,
+                ),
+                onPressed: () {
+                  //Navigate to Login page
+                  // TODO: later replace this with provider route
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => LoginPage(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  "Start Tracking",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             ),
