@@ -100,31 +100,34 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             const SizedBox(height: 20.0),
-            ElevatedButton(
-                onPressed: () {
-                  //TODO: login logic here
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => VerificationPage(),
-                  ));
-                },
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                  onPressed: () {
+                    //TODO: login logic here
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => VerificationPage(),
+                    ));
+                  },
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
                     ),
                   ),
-                ),
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-                  child: Text(
-                    "Login",
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 15, horizontal: 20),
+                    child: Text(
+                      "Login",
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
-                  ),
-                )),
+                  )),
+            ),
           ],
         ),
       ),
