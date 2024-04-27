@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_water_app/pages/pay_bills_page.dart';
 
 class ViewBillsPage extends StatelessWidget {
   const ViewBillsPage({Key? key}) : super(key: key);
@@ -32,6 +33,17 @@ class ViewBillsPage extends StatelessWidget {
           ),
           BillsList()
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add functionality for the floating action button here
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => PayBillsPage(),
+            ),
+          );
+        },
+        child: Icon(Icons.add),
       ),
     );
   }
